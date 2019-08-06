@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="APG-AZ-kJJ">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="FwJ-Tu-NxZ">
+            <objects>
+                <navigationController id="APG-AZ-kJJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="alert-icon" id="9i5-nG-TIO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0xD-9e-XAX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="65r-LC-Acq" kind="relationship" relationship="rootViewController" id="8FR-ag-X2c"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zaF-UG-dr5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-339" y="115"/>
+        </scene>
+        <!--Task Notifications Home View Controller-->
+        <scene sceneID="hVq-yV-iBA">
+            <objects>
+                <viewController id="65r-LC-Acq" customClass="TaskNotificationsHomeViewController" customModule="MyKlan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dce-Sd-9lw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxH-K8-MBM">
+                                <rect key="frame" x="40" y="229" width="334" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="cJM-Wf-Teh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Add New Task">
+                                    <color key="titleColor" red="0.74901960779999999" green="0.41568627450000001" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="uGy-lH-ig7" kind="show" id="OU4-PC-9Yl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Notifications" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufL-G0-EtE">
+                                <rect key="frame" x="40" y="138" width="334" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RQN-cZ-eA0">
+                                <rect key="frame" x="20" y="319" width="374" height="494"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskCell" rowHeight="115" id="JIi-JH-Bh7" customClass="TaskNotificationsTableViewCell" customModule="MyKlan" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="115"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JIi-JH-Bh7" id="dqB-d6-k0L">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="115"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TUq-FM-C64" customClass="DesignableUIView" customModule="MyKlan" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="10" width="334" height="95"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDM-Vc-OVZ">
+                                                            <rect key="frame" x="20" y="35.5" width="150" height="24"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="150" id="7Vb-5C-RN8"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nij-Ea-HV5">
+                                                            <rect key="frame" x="218" y="28" width="37" height="39"/>
+                                                            <state key="normal" image="task-alert-icon"/>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4j-Ep-1Vq">
+                                                            <rect key="frame" x="275" y="28" width="39" height="39"/>
+                                                            <state key="normal" image="task-edit-icon"/>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.96862745100000003" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="i4j-Ep-1Vq" firstAttribute="top" secondItem="TUq-FM-C64" secondAttribute="top" constant="28" id="JDy-ev-MOn"/>
+                                                        <constraint firstAttribute="bottom" secondItem="nij-Ea-HV5" secondAttribute="bottom" constant="28" id="K8O-Ri-tUb"/>
+                                                        <constraint firstAttribute="bottom" secondItem="i4j-Ep-1Vq" secondAttribute="bottom" constant="28" id="MZS-FX-e6g"/>
+                                                        <constraint firstAttribute="trailing" secondItem="i4j-Ep-1Vq" secondAttribute="trailing" constant="20" id="UsC-pe-3ap"/>
+                                                        <constraint firstItem="QDM-Vc-OVZ" firstAttribute="centerY" secondItem="TUq-FM-C64" secondAttribute="centerY" id="dLy-IQ-MDB"/>
+                                                        <constraint firstItem="QDM-Vc-OVZ" firstAttribute="leading" secondItem="TUq-FM-C64" secondAttribute="leading" constant="20" id="fNR-Jf-LZS"/>
+                                                        <constraint firstItem="nij-Ea-HV5" firstAttribute="top" secondItem="TUq-FM-C64" secondAttribute="top" constant="28" id="tmC-cU-a6x"/>
+                                                        <constraint firstItem="i4j-Ep-1Vq" firstAttribute="leading" secondItem="nij-Ea-HV5" secondAttribute="trailing" constant="20" id="vtZ-of-gln"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                            <size key="value" width="0.0" height="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                            <color key="value" red="0.058823529409999999" green="0.52156862749999999" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="TUq-FM-C64" secondAttribute="trailing" constant="20" id="GJL-aJ-1XU"/>
+                                                <constraint firstItem="TUq-FM-C64" firstAttribute="leading" secondItem="dqB-d6-k0L" secondAttribute="leading" constant="20" id="JXb-Cu-SRX"/>
+                                                <constraint firstItem="TUq-FM-C64" firstAttribute="top" secondItem="dqB-d6-k0L" secondAttribute="top" constant="10" id="WlH-Az-TrL"/>
+                                                <constraint firstAttribute="bottom" secondItem="TUq-FM-C64" secondAttribute="bottom" constant="10" id="kcy-w1-wfG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="taskAlertButton" destination="nij-Ea-HV5" id="ycB-dZ-AWL"/>
+                                            <outlet property="taskEditButton" destination="i4j-Ep-1Vq" id="Ypb-rB-oyz"/>
+                                            <outlet property="taskTitle" destination="QDM-Vc-OVZ" id="mrX-2L-oEv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="65r-LC-Acq" id="zM2-cE-kFj"/>
+                                    <outlet property="delegate" destination="65r-LC-Acq" id="edb-UH-sYb"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RQN-cZ-eA0" firstAttribute="top" secondItem="zxH-K8-MBM" secondAttribute="bottom" constant="50" id="EW8-0c-cAa"/>
+                            <constraint firstItem="Vcb-jz-B45" firstAttribute="trailing" secondItem="zxH-K8-MBM" secondAttribute="trailing" constant="40" id="Lw7-d0-GzX"/>
+                            <constraint firstItem="RQN-cZ-eA0" firstAttribute="leading" secondItem="Vcb-jz-B45" secondAttribute="leading" constant="20" id="RN3-QF-JAp"/>
+                            <constraint firstItem="zxH-K8-MBM" firstAttribute="leading" secondItem="Vcb-jz-B45" secondAttribute="leading" constant="40" id="UhR-Lb-g2B"/>
+                            <constraint firstItem="ufL-G0-EtE" firstAttribute="top" secondItem="Vcb-jz-B45" secondAttribute="top" constant="50" id="UpK-oG-ClZ"/>
+                            <constraint firstItem="Vcb-jz-B45" firstAttribute="trailing" secondItem="ufL-G0-EtE" secondAttribute="trailing" constant="40" id="eDG-qV-zJf"/>
+                            <constraint firstItem="zxH-K8-MBM" firstAttribute="top" secondItem="ufL-G0-EtE" secondAttribute="bottom" constant="50" id="lSh-gP-8Xf"/>
+                            <constraint firstItem="Vcb-jz-B45" firstAttribute="trailing" secondItem="RQN-cZ-eA0" secondAttribute="trailing" constant="20" id="oZE-7Z-ziY"/>
+                            <constraint firstItem="Vcb-jz-B45" firstAttribute="bottom" secondItem="RQN-cZ-eA0" secondAttribute="bottom" id="pUk-W4-Cup"/>
+                            <constraint firstItem="ufL-G0-EtE" firstAttribute="leading" secondItem="Vcb-jz-B45" secondAttribute="leading" constant="40" id="zHS-jy-lPR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vcb-jz-B45"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="K3a-XP-LNj"/>
+                    <connections>
+                        <outlet property="addNewTaskButton" destination="zxH-K8-MBM" id="dfW-ca-fga"/>
+                        <outlet property="tableView" destination="RQN-cZ-eA0" id="NE2-j9-NT7"/>
+                        <segue destination="0jw-cH-aTc" kind="show" identifier="TaskNotificationsEditTaskSegue" id="4To-hm-YiC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E5O-Ip-D8f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="578" y="115"/>
+        </scene>
+        <!--Task Notifications Add Task View Controller-->
+        <scene sceneID="MCv-zN-qXt">
+            <objects>
+                <viewController id="uGy-lH-ig7" customClass="TaskNotificationsAddTaskViewController" customModule="MyKlan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PyV-7Y-twe" customClass="DesignableUIView" customModule="MyKlan" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Task" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l48-Jw-y7e">
+                                <rect key="frame" x="40" y="138" width="334" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here you can add a new task which will be shared with your family." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bve-df-rb0">
+                                <rect key="frame" x="40" y="199" width="334" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Qh-H8-eef">
+                                <rect key="frame" x="0.0" y="290" width="414" height="523"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xxq-3x-8cc" customClass="DesignableUITextField" customModule="MyKlan" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="50" width="334" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="iNO-C5-czb"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="borderBottom" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aMV-3I-c9t">
+                                        <rect key="frame" x="40" y="110" width="334" height="150"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="WLO-AR-s3b"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="uGy-lH-ig7" id="yGh-A3-enS"/>
+                                        </connections>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="xxq-3x-8cc" firstAttribute="top" secondItem="5Qh-H8-eef" secondAttribute="top" constant="50" id="8gx-i0-j2e"/>
+                                    <constraint firstAttribute="trailing" secondItem="aMV-3I-c9t" secondAttribute="trailing" constant="40" id="Ei1-07-DED"/>
+                                    <constraint firstItem="aMV-3I-c9t" firstAttribute="top" secondItem="xxq-3x-8cc" secondAttribute="bottom" constant="20" id="MZy-Mz-iPw"/>
+                                    <constraint firstItem="aMV-3I-c9t" firstAttribute="leading" secondItem="5Qh-H8-eef" secondAttribute="leading" constant="40" id="Mff-ej-KTo"/>
+                                    <constraint firstAttribute="trailing" secondItem="xxq-3x-8cc" secondAttribute="trailing" constant="40" id="clE-6S-Sl2"/>
+                                    <constraint firstItem="xxq-3x-8cc" firstAttribute="leading" secondItem="5Qh-H8-eef" secondAttribute="leading" constant="40" id="mho-CI-Z0w"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5Qh-H8-eef" firstAttribute="top" secondItem="bve-df-rb0" secondAttribute="bottom" constant="50" id="Fq0-ky-RLc"/>
+                            <constraint firstItem="5Qh-H8-eef" firstAttribute="leading" secondItem="UeM-w2-IVR" secondAttribute="leading" id="LKi-qk-kuy"/>
+                            <constraint firstItem="bve-df-rb0" firstAttribute="top" secondItem="l48-Jw-y7e" secondAttribute="bottom" constant="20" id="Lmm-zT-YhX"/>
+                            <constraint firstItem="UeM-w2-IVR" firstAttribute="trailing" secondItem="5Qh-H8-eef" secondAttribute="trailing" id="MPj-zI-AQz"/>
+                            <constraint firstItem="l48-Jw-y7e" firstAttribute="top" secondItem="UeM-w2-IVR" secondAttribute="top" constant="50" id="NgS-Vw-fz8"/>
+                            <constraint firstItem="bve-df-rb0" firstAttribute="leading" secondItem="PyV-7Y-twe" secondAttribute="leading" constant="40" id="Pnr-rR-ufO"/>
+                            <constraint firstItem="UeM-w2-IVR" firstAttribute="bottom" secondItem="5Qh-H8-eef" secondAttribute="bottom" id="l6q-4Q-1uo"/>
+                            <constraint firstAttribute="trailing" secondItem="l48-Jw-y7e" secondAttribute="trailing" constant="40" id="pxL-lQ-kqH"/>
+                            <constraint firstAttribute="trailing" secondItem="bve-df-rb0" secondAttribute="trailing" constant="40" id="uJa-Y5-hqK"/>
+                            <constraint firstItem="l48-Jw-y7e" firstAttribute="leading" secondItem="UeM-w2-IVR" secondAttribute="leading" constant="40" id="v2C-ko-dfj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UeM-w2-IVR"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.52156862749999999" green="0.8862745098" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" red="0.066666666669999999" green="0.59999999999999998" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHorizontal" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" id="nI0-Pw-xlO">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="done-icon" id="efG-7q-dmz">
+                            <connections>
+                                <action selector="saveTaskButtonTapped:" destination="uGy-lH-ig7" id="7S3-1G-lk3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="taskDescriptionTextView" destination="aMV-3I-c9t" id="VqI-ns-8Mh"/>
+                        <outlet property="taskTitleTextField" destination="xxq-3x-8cc" id="PwO-kz-DV6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hlW-CO-XBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1755" y="-224"/>
+        </scene>
+        <!--Task Notifications Edit Task View Controller-->
+        <scene sceneID="hfc-Zk-pyq">
+            <objects>
+                <viewController id="0jw-cH-aTc" customClass="TaskNotificationsEditTaskViewController" customModule="MyKlan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EfE-GY-tpn" customClass="DesignableUIView" customModule="MyKlan" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNu-9E-R5e">
+                                <rect key="frame" x="40" y="138" width="334" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is your task details. You can view, edit or delete it." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hjx-eg-8PQ">
+                                <rect key="frame" x="40" y="199" width="334" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZR-3B-pMP">
+                                <rect key="frame" x="0.0" y="290" width="414" height="523"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g7k-0p-THn" customClass="DesignableUITextField" customModule="MyKlan" customModuleProvider="target">
+                                        <rect key="frame" x="40" y="50" width="334" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="oXo-8A-ZbJ"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="borderBottom" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wt7-aU-wKt">
+                                        <rect key="frame" x="40" y="110" width="334" height="150"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="Xmc-QI-3at"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="0jw-cH-aTc" id="qEE-HO-mt4"/>
+                                        </connections>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1Y-wT-ei1">
+                                        <rect key="frame" x="40" y="310" width="334" height="40"/>
+                                        <color key="backgroundColor" red="0.74901960779999999" green="0.41568627450000001" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="jAJ-zS-lFi"/>
+                                        </constraints>
+                                        <state key="normal" title="Delete Task">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="deleteTaskButtonTapped:" destination="0jw-cH-aTc" eventType="touchUpInside" id="nad-4K-tdo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Wt7-aU-wKt" firstAttribute="top" secondItem="g7k-0p-THn" secondAttribute="bottom" constant="20" id="1Go-Ww-IWK"/>
+                                    <constraint firstItem="Wt7-aU-wKt" firstAttribute="leading" secondItem="aZR-3B-pMP" secondAttribute="leading" constant="40" id="1Q4-BR-tWa"/>
+                                    <constraint firstItem="H1Y-wT-ei1" firstAttribute="top" secondItem="Wt7-aU-wKt" secondAttribute="bottom" constant="50" id="36o-kd-pXk"/>
+                                    <constraint firstAttribute="trailing" secondItem="g7k-0p-THn" secondAttribute="trailing" constant="40" id="Oux-fB-bdS"/>
+                                    <constraint firstItem="g7k-0p-THn" firstAttribute="top" secondItem="aZR-3B-pMP" secondAttribute="top" constant="50" id="brA-P5-Sow"/>
+                                    <constraint firstItem="g7k-0p-THn" firstAttribute="leading" secondItem="aZR-3B-pMP" secondAttribute="leading" constant="40" id="lRY-sp-8jm"/>
+                                    <constraint firstAttribute="trailing" secondItem="H1Y-wT-ei1" secondAttribute="trailing" constant="40" id="puw-MB-064"/>
+                                    <constraint firstItem="H1Y-wT-ei1" firstAttribute="leading" secondItem="aZR-3B-pMP" secondAttribute="leading" constant="40" id="qAW-z2-qdP"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wt7-aU-wKt" secondAttribute="trailing" constant="40" id="wLu-oQ-OM7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Hjx-eg-8PQ" firstAttribute="leading" secondItem="EfE-GY-tpn" secondAttribute="leading" constant="40" id="638-Ow-Zkx"/>
+                            <constraint firstItem="aZR-3B-pMP" firstAttribute="top" secondItem="Hjx-eg-8PQ" secondAttribute="bottom" constant="50" id="8cg-Ce-kdn"/>
+                            <constraint firstItem="HNu-9E-R5e" firstAttribute="leading" secondItem="5xL-Hi-tWS" secondAttribute="leading" constant="40" id="Cby-kZ-DoP"/>
+                            <constraint firstItem="5xL-Hi-tWS" firstAttribute="bottom" secondItem="aZR-3B-pMP" secondAttribute="bottom" id="GBL-5j-Fag"/>
+                            <constraint firstAttribute="trailing" secondItem="HNu-9E-R5e" secondAttribute="trailing" constant="40" id="IiE-2U-3PQ"/>
+                            <constraint firstItem="aZR-3B-pMP" firstAttribute="leading" secondItem="5xL-Hi-tWS" secondAttribute="leading" id="glj-17-E1M"/>
+                            <constraint firstItem="HNu-9E-R5e" firstAttribute="top" secondItem="5xL-Hi-tWS" secondAttribute="top" constant="50" id="o4x-zr-FMS"/>
+                            <constraint firstItem="5xL-Hi-tWS" firstAttribute="trailing" secondItem="aZR-3B-pMP" secondAttribute="trailing" id="osR-e3-9Sb"/>
+                            <constraint firstAttribute="trailing" secondItem="Hjx-eg-8PQ" secondAttribute="trailing" constant="40" id="sY8-LL-cvl"/>
+                            <constraint firstItem="Hjx-eg-8PQ" firstAttribute="top" secondItem="HNu-9E-R5e" secondAttribute="bottom" constant="20" id="v2i-bC-HZF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5xL-Hi-tWS"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.52156862749999999" green="0.8862745098" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" red="0.066666666669999999" green="0.59999999999999998" blue="0.5568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHorizontal" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" id="mes-oO-1nj">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="done-icon" id="0L7-Uu-HrD">
+                            <connections>
+                                <action selector="saveTaskButtonTapped:" destination="0jw-cH-aTc" id="Vb7-DP-IA0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="deleteTaskButton" destination="H1Y-wT-ei1" id="Twy-s8-0NY"/>
+                        <outlet property="taskDescriptionTextView" destination="Wt7-aU-wKt" id="7kH-TR-0QJ"/>
+                        <outlet property="taskTitleTextField" destination="g7k-0p-THn" id="bFQ-vl-Hfb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ps7-fv-cqX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1754" y="544"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="alert-icon" width="23.5" height="24.5"/>
+        <image name="done-icon" width="36" height="36"/>
+        <image name="task-alert-icon" width="37" height="38"/>
+        <image name="task-edit-icon" width="38.5" height="37.5"/>
+    </resources>
+</document>
